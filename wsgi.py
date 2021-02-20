@@ -1,3 +1,3 @@
 from flaskblog import app
 
-app = app()
+app = app
