@@ -1,12 +1,14 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy 
 from datetime import datetime
+import os
+basedir = os.path.abspath(os.path.dirname(__file__))
 
 app = Flask(__name__)
+app.config['SECRET_KEY']= 'YaredYeArsemaLij'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('postgres://dqrguzvhckgtvm:b5f28eb9809eac23b1f183b4be7a5a43257880d000e9f9525111007bcc3cb6ba@ec2-54-225-190-241.compute-') or \
+        'sqlite:///' + os.path.join(basedir, 'blog.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
-app.config['DATABASE_URL'] = 'postgres://dqrguzvhckgtvm:b5f28eb9809eac23b1f183b4be7a5a43257880d000e9f9525111007bcc3cb6ba@ec2-54-225-190-241.compute-'
-
 db = SQLAlchemy(app)
 
 class Blogpost(db.Model):
