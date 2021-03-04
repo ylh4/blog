@@ -1,11 +1,6 @@
-Video link here: https://youtu.be/XHGpPCYmPvI
+# Flask Blog Tutorial Series
 
-
-# Features
-  1. Add Posts
-  2. View Post
-  3. View All Posts
- 
- # Info
- 
- It is a simple application made in flask a python framework. It has covered topics such as Database Modelling and Routing.
+ - Part 1: https://www.youtube.com/watch?v=fFE8GZvwRrA
+ - Part 2: https://www.youtube.com/watch?v=7hgY9b6awhg
+ - Part 3: https://www.youtube.com/watch?v=eQmLkqZA588
+ - Part 4: https://www.youtube.com/watch?v=6VGu1CwCN2Y

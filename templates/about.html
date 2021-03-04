@@ -1,48 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Clean Blog - Start Bootstrap Theme</title>
+    <title>about</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+    <link
+      href="../static/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Custom fonts for this template -->
-    <link href="{{ url_for('static', filename='font-awesome.min.css') }}" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link
+      href="../static/vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+      rel="stylesheet"
+      type="text/css"
+    />
 
     <!-- Custom styles for this template -->
-    <link href="{{ url_for('static', filename='clean-blog.min.css') }}" rel="stylesheet">
-
+    <link href="../static/css/clean-blog.min.css" rel="stylesheet" />
   </head>
 
   <body>
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand" href="{{ url_for('index') }}">Start Bootstrap</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        
+        <button
+          class="navbar-toggler navbar-toggler-right"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           Menu
-          <i class="fa fa-bars"></i>
+          <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+              <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('about') }}">About</a>
+              <a class="nav-link" href="/about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('add') }}">Add</a>
+            <a class="nav-link" href="/portfolio">Portfolio</a>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/blog">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -50,13 +78,19 @@
     </nav>
 
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('{{ url_for('static', filename='about-bg.jpg') }}')">
+
+    <header
+      class="masthead"
+      style="background-image: url('../static/img/about_me.jpeg');background-repeat: no-repeat; background-size: 100%"
+    >
+      <div class="overlay"></div>
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="col-md-6">
             <div class="page-heading">
-              <h1>About Me</h1>
-              <span class="subheading">This is what I do.</span>
+              <span class="subheading">Hello! I am</p></span>
+              <h1>Yared Hurisa</h1>
+              <span class="subheading">Applied Sicentist, Kimetrica</p></span>
             </div>
           </div>
         </div>
@@ -64,37 +98,290 @@
     </header>
 
     <!-- Main Content -->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum molestiae debitis nobis, quod sapiente qui voluptatum, placeat magni repudiandae accusantium fugit quas labore non rerum possimus, corrupti enim modi! Et.</p>
-        </div>
-      </div>
+    <head> 
+      <style> 
+      
+      .main-container{ 
+        position: relative; 
+        margin-left: 10%;
+        margin-right: 10%
+        
+        
+    } 
+    /*creating line for timeline*/ 
+    .main-container::after{ 
+        content: ''; 
+        position: absolute; 
+        width: 10px; 
+        background-color:darkgray; 
+        top:0; 
+        bottom: 0; 
+        left: 50%; 
+        margin-left: -3px; 
+    } 
+    /*Adjusting box of all content*/ 
+    .text-wrapper{ 
+        padding: 10px 40px; 
+        position: relative; 
+        width:51%; 
+        box-sizing: border-box; 
+        margin: 50px 0; 
+    } 
+    .text-wrapper::after{ 
+        content: ''; 
+        position: absolute; 
+        width: 30px; 
+        height: 25px; 
+        right: -10px; 
+        background-color:darkgray; 
+        border: 4px solid #FF9F55;
+        top:15px; 
+        border-radius: 50%; 
+        z-index: 1; 
+    } 
+    /*for left events*/ 
+    .left{ 
+        left: 0; 
+    } 
+    /*for right events*/ 
+    .right{ 
+        left:50%; 
+    } 
+    .right::after{ 
+        left:-10px; 
+    } 
+    /*content box colour padding  
+    and radius for circular corner*/ 
+    .content_left{ 
+        padding: 15px 15px 15px 17px; 
+        background-color:darkgray; 
+        border-radius: 4px; 
+        height: 15;
+        z-index: 1;
+        border: medium solid white;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent white;
+    } 
+
+    .content_right{ 
+        padding: 15px 15px 15px 17px; 
+        background-color:darkgrey; 
+        border-radius: 4px; 
+        height: 15;
+        z-index: 1;
+        left: 30px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    } 
+    /*setting text property of event heading*/ 
+    .content_left h3{ 
+        text-transform: uppercase; 
+        font-size: 18px; 
+        color:white; 
+        letter-spacing:1px; 
+        font-style: bold;
+    } 
+    .content_right h3{ 
+        text-transform: uppercase; 
+        font-size: 18px; 
+        color:white; 
+        letter-spacing:1px; 
+        font-style: bold;
+    } 
+    /*setting text property of event content*/ 
+    .content_left p{ 
+        color:white; 
+        font-weight: 300; 
+        font-size: 18px; 
+        margin-top: 2px; 
+        font-style: italic;
+    }
+
+    .content_right p{ 
+        color:white; 
+        font-weight: 300; 
+        font-size: 18px; 
+        margin-top: 2px; 
+        font-style: italic;
+    }
+    .content_left ul{ 
+        color:white; 
+        font-weight: 300; 
+        font-size: 18px; 
+        margin-top: 2px; 
+    }
+
+    .content_right ul{ 
+        color:white; 
+        font-weight: 300; 
+        font-size: 18px; 
+        margin-top: 2px; 
+    }
+   
+h1 {
+  text-align: center;
+}
+
+a {
+    color:white; 
+    font-weight: 300; 
+    font-size: 18px; 
+    margin-top: 2px;
+    font-style: bold;
+}
+
+</style> 
+<div class="container">
+  <div class="row">
+
+  <!-- Post Content Column -->
+  <div class="col-lg-12">
+
+    <p class="lead"> With over a decade of proffessional experience in applied data science in humanitarian and development projects, I am dedicated to harness the field to unpack pressing issues that could widely affect peace and development.</p>
+        
+    
+    <body> 
+     <!-- container which will contain our timeline -->
+     <h1>How I got here?</h1> 
+        <div class="main-container"> 
+          
+            <!-- event 1st of timeline -->
+            <div class="text-wrapper left"> 
+              
+                <!-- all text content of timeline -->
+                <div class="content_right"> 
+                    <h3>SPT 2020- Present, US</h3> 
+                    <p>Applied Scientist, Kimetrica</p> 
+                    <ul>
+                      <li>research</li>
+                      <li>modeling</li>
+                      <li>analysis</li>
+                    </ul> 
+                </div> 
+            </div> 
+            <!-- event 1st of timeline -->
+            <div class="text-wrapper right"> 
+                <!-- all text content of timeline -->
+                <div class="content_left"> 
+                  <h3>AUG 2020, US</h3> 
+                  <p><a href="https://www.youracclaim.com/badges/ef6f3645-6036-495f-b832-9f834b4cf1b5">Certified Data Scientist, TDI</a></p> 
+                  <ul>
+                    <li>Machine Learning</li>
+                    <li>NLP </li>
+                    <li>Advanced SQL</li>
+                    <li>Deep Learning</li>
+                    <li>Time series analysis</li>
+                </div> 
+            </div> 
+            <!-- event 1st of timeline -->
+            <div class="text-wrapper left"> 
+                <!-- all text content of timeline -->
+                <div class="content_right"> 
+                  <h3>May 2020, US</h3> 
+                  <p>Masters in International Development Policy, Duke</p> 
+                  <ul>
+                    <li>Applied Field Practice</li>
+                    <li>Policy Analysis</li>
+                    <li>Principles of Data Science</li>
+                    <li>Conflict Analysis and Management</li>
+                    <li>Emperical Analysis</li>
+                </div> 
+            </div> 
+            <!-- event 1st of timeline -->
+            <div class="text-wrapper right"> 
+                <!-- all text content of timeline -->
+                <div class="content_left"> 
+                  <h3>Aug2018-May 2020, US</h3> 
+                  <p><a href="https://rotarypeacecenternc.org/fellow/yared-lemma/">Rotary Peace Fellow, Duke-UNC Peace Center</a></p> 
+                  <ul>
+                    <li>Leadership</li>
+                    <li>Conflict Management </li>
+                    <li>Research</li>
+                    <li>Advocacy</li>
+                </div> 
+            </div> 
+                  <!-- event 1st of timeline -->
+                  <div class="text-wrapper left"> 
+                    <!-- all text content of timeline -->
+                    <div class="content_right"> 
+                      <h3>Jan 200-Jul 2020, Ethiopia</h3> 
+                      <p>International Development Proffessional, Various</p> 
+                      <ul>
+                        <li>Knowledge Manager, Tufts University</li>
+                        <li>Technical Advisor/Knowledge Solutions, Kimetrica</li>
+                        <li>Data Quality Manager, Tufts University</li>
+                        <li>Senior Research Assistant, The Livelihoods Program</li>
+                        
+                    </div> 
+                </div> 
+              </div>
+            </div>
+         </div> 
+      </body> 
     </div>
+  </div>
 
-    <hr>
+ <hr />
 
-    <!-- Footer -->
-    <footer>
+<!-- Footer -->
+  <footer>
+    <style>
+      a1 {
+            color:black; 
+            font-weight: 300; 
+            font-size: 18px; 
+            margin-top: 2px;
+            font-style: bold;
+                      }
+
+    </style>
+
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
-            <p class="copyright text-muted">Copyright &copy; Your Website 2017</p>
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a1 href="https://twitter.com/yaredlemma6" target="_blank" rel="noopener noreferrer">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a1>
+              <li class="list-inline-item">
+                 <a1 href="https://www.linkedin.com/in/yared-lemma/" target="_blank" rel="noopener noreferrer">
+                    <span class="fa-stack fa-lg">
+                      
+                      <meta name="viewport" content="width=device-width, initial-scale=1">
+                      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                      
+                      <i style="font-size:52px" class="fa">&#xf08c;</i>
+                    </span>
+                 </a1>
+              <li class="list-inline-item">
+                  <a1 href="https://github.com/ylh4" target="_blank" rel="noopener noreferrer">
+                    <span class="fa-stack fa-lg">
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                      <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a1>
+              
+
+              </li>
+            </ul>
+            <p class="copyright text-muted">
+              Copyright &copy; Yared Hurisa 2021
+            </p>
           </div>
         </div>
       </div>
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='popper.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="{{ url_for('static', filename='clean-blog.min.js') }}"></script>
-
+    <script src="../static/js/clean-blog.min.js"></script>
   </body>
-
 </html>
