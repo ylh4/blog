@@ -123,6 +123,10 @@ def logout():
     session.clear()
     return redirect("/")
 
+@app.route("/google1b28703d9c835e86.html")
+def google_site_verf():
+    return render_template("google1b28703d9c835e86.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
