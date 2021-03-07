@@ -10,7 +10,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 app = Flask(__name__)
 
 app.config['SECRET_KEY']= os.environ.get('SECRET_KEY'),
-app.config['DATABASE_URL'] = os.environ.get('DATABASE_URL') or\
+app.config['DATABASE_URI'] = os.environ.get('DATABASE_URL') or\
         'sqlite:///' + os.path.join(basedir, 'blog.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['MAIL_SERVER'] = 'smtp.googlemail.com'
