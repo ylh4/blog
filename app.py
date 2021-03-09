@@ -5,20 +5,21 @@ from flask_admin.contrib.sqla import ModelView
 import sqlalchemy
 from flask_mail import Mail, Message
 import os
-basedir = os.path.abspath(os.path.dirname(__file__))
+from config import mail_username, mail_password
 
+basedir = os.path.abspath(os.path.dirname(__file__))
 app = Flask(__name__)
 
-app.config['SECRET_KEY']= os.environ.get('SECRET_KEY'),
+app.config['SECRET_KEY']= 'YaredYeArsemaLij'
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('postgres://dqrguzvhckgtvm:b5f28eb9809eac23b1f183b4be7a5a43257880d000e9f9525111007bcc3cb6ba@ec2-54-225-190-241.compute-') or \
         'sqlite:///' + os.path.join(basedir, 'blog.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['MAIL_SERVER'] = 'smtp.googlemail.com'
+app.config['MAIL_SERVER'] = "smtp.googlemail.com'"
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USE_SSL'] = os.environ.get('MAIL_USE_SSL')
-app.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME')
-app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD')
+app.config['MAIL_USE_SSL'] = False
+app.config['MAIL_USERNAME'] = mail_username
+app.config['MAIL_PASSWORD'] = mail_password
 
 mail = Mail(app),
 
@@ -108,10 +109,11 @@ def contact():
     return render_template("contact.html")
 
 
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        if request.form.get("username") == os.environ['USER_NAME'] and request.form.get("password") == os.environ['PASSWORD']:
+        if request.form.get("username") == "ylh4" and request.form.get("password") == "Enateye05":
             session['logged_in'] = True
             return redirect("/admin")
         else:
@@ -123,10 +125,6 @@ def login():
 def logout():
     session.clear()
     return redirect("/")
-
-@app.route("/google1b28703d9c835e86.html")
-def google_site_verf():
-    return render_template("google1b28703d9c835e86.html")
 
 
 if __name__ == "__main__":
