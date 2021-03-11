@@ -1,2 +1,4 @@
-mail_username = "yaredlema@gmail.com"
-mail_password = "Enateye05"
+import os
+
+mail_username = os.environ["mail_username"]
+mail_password = os.environ['mail_password']
