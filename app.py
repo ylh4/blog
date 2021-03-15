@@ -78,10 +78,12 @@ def displacement():
 @app.route("/landuse")
 def landuse():
     return render_template("landuse.html")
-@app.route("/blog")
+
+@app.route('/blog')
 def blog():
-    posts = Posts.query.all()
-    return render_template("blog.html", posts=posts)
+    posts = Posts.query.order_by(Posts.date_posted.desc()).all()
+
+    return render_template('blog.html', posts=posts)
 
 @app.route("/post/<string:slug>")
 def post(slug):
