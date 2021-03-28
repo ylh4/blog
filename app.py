@@ -126,7 +126,9 @@ def login():
 def logout():
     session.clear()
     return redirect("/")
-
+@app.route("/ads")
+def ads():
+    return render_template("ads.txt")
 
 if __name__ == "__main__":
     app.run(debug=True)
