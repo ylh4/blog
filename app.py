@@ -70,18 +70,6 @@ def homepage():
 @app.route("/about")
 def about():
     return render_template("about.html")
-@app.route("/portfolio")
-def portfolio():
-    return render_template("portfolio.html")
-@app.route("/conflict")
-def conflict():
-    return render_template("conflict.html")
-@app.route("/displacement")
-def displacement():
-    return render_template("displacement.html")
-@app.route("/landuse")
-def landuse():
-    return render_template("landuse.html")
 
 @app.route('/blog')
 def blog():
