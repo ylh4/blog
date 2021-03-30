@@ -6,8 +6,11 @@ import sqlalchemy
 from flask_mail import Mail, Message
 import os
 from config import mail_username, mail_password
+from flask_share import Share
 
 basedir = os.path.abspath(os.path.dirname(__file__))
+
+
 app = Flask(__name__)
 
 app.config['SECRET_KEY']= os.environ['SECRET_KEY']
@@ -19,6 +22,7 @@ app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
 app.config['MAIL_USERNAME'] = mail_username
 app.config['MAIL_PASSWORD'] = mail_password
+
 
 mail = Mail(app),
 
